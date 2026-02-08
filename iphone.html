@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>iPhone Offer</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f7f7f7;
+      text-align: center;
+      padding: 20px;
+    }
+    .container {
+      max-width: 400px;
+      margin: 0 auto;
+      background: #fff;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    textarea {
+      width: 100%;
+      padding: 10px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      margin-bottom: 15px;
+      font-size: 14px;
+      resize: none;
+    }
+    button {
+      padding: 12px 20px;
+      font-size: 16px;
+      border-radius: 10px;
+      border: none;
+      background: #4caf50;
+      color: white;
+      cursor: pointer;
+      margin-bottom: 15px;
+    }
+    button:hover {
+      background: #45a049;
+    }
+    #reward {
+      display: none; /* hidden initially */
+      background: #fffbeb;
+      padding: 15px;
+      border-radius: 12px;
+      margin-top: 15px;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>🍏 iPhone Offer</h2>
+    
+    <!-- Textbox for description -->
+    <textarea rows="4" readonly>
+Install this app and open it for a few moments to unlock the content.
+    </textarea>
+
+    <!-- Single offer button -->
+    <button onclick="window.open('https://singingfiles.com/show.php?l=0&u=2497317&id=71659','_blank')" class="offer">
+      Open Offer
+    </button>
+
+    <!-- Reward content -->
+    <div id="reward">
+      <p>✅ Your reward is unlocked!</p>
+      <p>[Insert video, download link, or text content here]</p>
+      <a href="index.html"><button>Back to Home</button></a>
+    </div>
+  </div>
+
+  <script>
+    const offers = document.querySelectorAll('.offer');
+    const reward = document.getElementById('reward');
+
+    offers.forEach(offer => {
+      offer.addEventListener('click', () => {
+        if (!reward.style.display || reward.style.display === 'none') {
+          setTimeout(() => {
+            reward.style.display = 'block';
+          }, 30000); // 30 seconds
+        }
+      });
+    });
+  </script>
+</body>
+</html>

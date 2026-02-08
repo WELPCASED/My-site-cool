@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Android Offer</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f2f2f2;
+      text-align: center;
+      padding: 20px;
+    }
+    .container {
+      max-width: 420px;
+      margin: auto;
+      background: white;
+      padding: 20px;
+      border-radius: 12px;
+    }
+    textarea {
+      width: 100%;
+      padding: 10px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      margin-bottom: 15px;
+      resize: none;
+    }
+    button {
+      width: 100%;
+      padding: 14px;
+      font-size: 16px;
+      border: none;
+      border-radius: 10px;
+      background: #34a853;
+      color: white;
+      cursor: pointer;
+    }
+    #reward {
+      display: none;
+      margin-top: 20px;
+      background: #fffbeb;
+      padding: 15px;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h2>🤖 Android Offer</h2>
+
+  <textarea rows="4" readonly>
+Install this app and open it for a few moments to unlock the content..
+  </textarea>
+
+  <button class="offer"
+    onclick="window.open('https://singingfiles.com/show.php?l=0&u=2497317&id=74092','_blank')">
+    Open Offer
+  </button>
+
+  <div id="reward">
+    <p>✅ Content Unlocked!</p>
+    <p>[Put your reward here]</p>
+  </div>
+</div>
+
+<script>
+  const offer = document.querySelector('.offer');
+  const reward = document.getElementById('reward');
+
+  offer.addEventListener('click', () => {
+    setTimeout(() => {
+      reward.style.display = 'block';
+    }, 30000);
+  });
+</script>
+
+</body>
+</html>
